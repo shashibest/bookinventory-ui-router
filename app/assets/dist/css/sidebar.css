@@ -1,0 +1,62 @@
+      /* I am shashikant ,my custom added css booklist.html*/
+.profile-user-img {
+    border: 3px solid #d2d6de;
+    margin: 0 auto;
+    padding: 3px;
+    width: 50px;
+}
+.profile-user-img-top {
+    border: 1px solid #d2d6de;
+    margin: 0 auto;
+    padding: 1px;
+    width: 25px;
+}
+.user-panel {
+    overflow: hidden;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+}
+	   
+   .user-panel > .info {
+    left: 55px;
+    line-height: 1;
+    padding: 5px 5px 5px 15px;
+    position: absolute;
+}
+.MenuNavigation{
+padding-left: 20px;
+}
+.dropdown-user
+{
+background-color: skyblue;
+color: white;
+width:220px;
+}
+.avatar {
+    border-radius: 3px;
+    display: inline-block;
+    line-height: 1;
+    overflow: hidden;
+    vertical-align: middle;
+}
+
+@media (max-width:1300px){
+	.bookdetails  {margin-top:5px;}
+	.booktitle { font-size:25px;}
+	.bookdetails1 { font-size:20px;}
+	
+	}
+	
+ @media (max-width:480px){
+     .bookdetails  {margin-top:5px;}
+	.booktitle { font-size:11px;}
+	.bookdetails1 { font-size:11px;}
+	
+	.selectbook  {margin-top:5px;}
+	.selectbook .booktitle { font-size:20px;}
+	.selectbook .bookdetails1 { font-size:15px;}
+	.usertongle {display:none;}
+	}
+	
+ 	   

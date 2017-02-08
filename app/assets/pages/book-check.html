@@ -1,0 +1,120 @@
+ 
+
+       <div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h4 class=""> <b></b>&emsp;Books Check In</h4>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-md-5">
+				  <div style="padding:8px">
+				      <h4 class="col-md-6 col-sm-6 col-xs-6">  <a href="" ><i class="btn btn-info btn-circle"><i class="fa fa-check"></i></i ></a>&nbsp; Manual</h4>
+				      <h4 class="col-md-6 col-sm-6 col-xs-6">  <a href="" ><i class="btn btn-default btn-circle"></i ></a>&nbsp; Scanner</h4>
+				  </div><!-----#!/scanner--->
+                    
+                </div>
+            </div><br>
+	<div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class=" panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title text-center ">Manual(<em> Insert / Update </em>)</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form role="form" name="manualform">
+                            <!------------------ISBN13---------------->
+                                <div class="form-group input-grou" ng-class="{ 'has-error': manualform.ISBN13.$dirty && manualform.ISBN13.$invalid }">
+                                    <input class="form-control" placeholder="ISBN13 *" name="ISBN13" type="text" ng-model='bookcheckin.ISBN13' id="ISBN13" required autofocus>
+                                </div>
+								<div ng-messages="manualform.ISBN13.$error " ng-if="manualform.ISBN13.$dirty" style="color:maroon; padding-left:40px; " class="fa"role="alert">     
+                                   <div ng-messages-include="assets/pages/messages.html"></div>
+                                </div>
+						   <!-----------------ISBN10----------------->
+								<div class="form-group input-grou" ng-class="{ 'has-error': manualform.ISBN10.$dirty && manualform.ISBN10.$invalid }">
+                                    <input class="form-control" placeholder="ISBN10 *" name="ISBN10" type="text" ng-model='bookcheckin.ISBN10' id="ISBN10" required >
+                                </div>
+								<div ng-messages="manualform.ISBN10.$error " ng-if="manualform.ISBN10.$dirty" style="color:maroon; padding-left:40px; " class="fa"role="alert">     
+                                   <div ng-messages-include="assets/pages/messages.html"></div>
+                                </div>
+							<!----------------title------------------>
+                               <div class="form-group input-grou" ng-class="{ 'has-error': manualform.title.$dirty && manualform.title.$invalid }">
+                                    <input class="form-control" placeholder="Title *" name="title" type="text" ng-model='bookcheckin.title' id="title" required ng-click="getISBNdetails(bookcheckin.ISBNN)">
+                                </div>
+								<div ng-messages="manualform.title.$error " ng-if="manualform.title.$dirty" style="color:maroon; padding-left:40px; " class="fa"role="alert">     
+                                   <div ng-messages-include="assets/pages/messages.html"></div>
+                                </div>
+							<!------------------publisher---------------->
+								<div class="form-group input-grou" ng-class="{ 'has-error': manualform.publisher.$dirty && manualform.publisher.$invalid }">
+                                    <input class="form-control" placeholder="Publisher *" name="publisher" type="text" ng-model='bookcheckin.publisher' id="publisher" required>
+								</div>
+								<div ng-messages="manualform.publisher.$error " ng-if="manualform.publisher.$dirty" style="color:maroon; padding-left:40px; " class="fa"role="alert">     
+                                   <div ng-messages-include="assets/pages/messages.html"></div>
+                                </div>
+							<!----------------quantity------------------>
+								<div class="form-group input-grou" ng-class="{ 'has-error': manualform.quantity.$dirty && manualform.quantity.$invalid }">
+                                    <input class="form-control" placeholder="Quantity *" name="quantity" type="number" ng-model='bookcheckin.quantity' id="quantity" ng-pattern="/^[0-9\s]*$/" required>
+								</div>
+                                <div ng-messages="manualform.quantity.$error " ng-if="manualform.quantity.$dirty" style="color:maroon; padding-left:40px; " class="fa"role="alert">     
+                                   <div ng-messages-include="assets/pages/messages.html"></div>
+                                </div>								
+							<!-----------------price----------------->	
+								<div class="form-group input-grou" ng-class="{ 'has-error': manualform.price.$dirty && manualform.price.$invalid }">
+                                    <input class="form-control" placeholder="Price *" name="price" type="text" ng-model='bookcheckin.price' currency id="price" ng-pattern="/^[0-9.\s]*$/" required>
+								</div>
+								<div ng-messages="manualform.price.$error " ng-if="manualform.price.$dirty" style="color:maroon; padding-left:40px; " class="fa"role="alert">     
+                                   <div ng-messages-include="assets/pages/messages.html"></div>
+                                </div>
+							<!---------------------------------->	
+								<div class="form-group" style="display:none">
+                                    <input  class="form-control" placeholder="Binding" name="binding" type="text" >
+								</div>
+								
+							<!---------------binLocation------------------->
+							<div class="form-group input-grou" ng-class="{ 'has-error': manualform.binLocation.$dirty && manualform.binLocation.$invalid }">
+                                    <input class="form-control" placeholder="Bin location" name="binLocation" type="text" ng-model='bookcheckin.binLocation' required>
+							</div>
+							<div ng-messages="manualform.binLocation.$error " ng-if="manualform.binLocation.$dirty" style="color:maroon; padding-left:40px; " class="fa"role="alert">     
+                                   <div ng-messages-include="assets/pages/messages.html"></div>
+                            </div>
+							<!-------------------Spot--------------->
+                                <div class="form-group" style="display:none">
+                                    <input  class="form-control" placeholder="Spot" name="spot" type="text" >
+								</div>
+							<!----------------readingLevel------------------>
+								<div class="form-group input-grou" ng-class="{ 'has-error': manualform.readingLevel.$dirty && manualform.readingLevel.$invalid }">
+                                     <input class="form-control" placeholder="Reading level ex.4" name="readingLevel" type="text" 
+									ng-model='bookcheckin.readingLevel' required>
+								</div>
+								<div ng-messages="manualform.readingLevel.$error " ng-if="manualform.readingLevel.$dirty" style="color:maroon; padding-left:40px; " class="fa"role="alert">     
+                                   <div ng-messages-include="assets/pages/messages.html"></div>
+                                </div>
+							<!-----------------Submit----------------->
+                                <div class="row">
+                                   <div class="col-md-12">								
+									 <a ui-sref="myapp.Dashboard" class="btn btn-outline btn-primary col-xs-4 col-sm-4">Cancel</a>	
+                                     
+									 <button ng-disabled="!manualform.$valid || isbnvalidation.error || isbnvalidation.lengtherror"  ng-click="insertBook(bookcheckin)" class="btn btn-outline btn-primary col-xs-4 col-xs-offset-4 col-sm-4 col-sm-offset-4"> Submit </button>
+								   </div>					
+								</div>
+								
+                           
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+            <!-- /.row -->
+            
+            
+        </div>
+        <!-- /#page-wrapper -->
+
+ 
+
+
+

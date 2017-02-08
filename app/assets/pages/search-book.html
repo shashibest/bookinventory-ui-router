@@ -1,0 +1,68 @@
+	 
+<div id="page-wrapper">
+            <div class="row" style="padding:10px">
+                <!-- /.col-lg-12 -->
+            </div>
+    
+            <!-- /.row -->
+    	<div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class=" panel panel-default">
+				      <h3 class="text-center">Search Books</h3>
+                    
+                    <div class="panel-body">
+                         <form role="form" name="searchbook">
+                            
+                                <div class="form-group">
+                                    <input ng-model="searchData.ISBN"  ng-keyup="disableButton(searchData.ISBN)" ng-readonly="disableISBN" class="form-control" placeholder="Enter ISBN " name="ISBN" type="text" autofocus required>
+								
+                                </div>
+								<center>(or)<center>	
+								<br>
+                                <div class="form-group">
+                                   <input ng-model="searchData.title" ng-keyup="disableButton2(searchData.title)" ng-readonly="disableTitle" class="form-control" placeholder="Enter Title " name="title" type="text" >
+								  
+                                </div>
+								<br>
+                                <div class="row" >
+                                   <div class="col-md-12">								
+									 <a ui-sref="myapp.Dashboard" class="btn btn-outline btn-primary col-xs-4 col-sm-4">Cancel</a>	
+                                     
+									 <button ng-if="searchbyISBN" ng-disabled="searchData.ISBN == '' && searchData.title == ''" ng-click="searchByProp('ISBN', searchData.ISBN)" class="btn btn-outline btn-success col-xs-5 col-xs-offset-3 col-sm-5 col-sm-offset-3">Search By ISBN</button>
+									 
+									 <button ng-if="!searchbyISBN" ng-disabled="searchData.ISBN == '' && searchData.title == ''" ng-click="searchByProp('title', searchData.title)" class="btn btn-outline btn-success col-xs-5 col-xs-offset-3 col-sm-5 col-sm-offset-3">Search By Title</button>
+									</div>					
+								</div>
+								 <div class="row">
+									<div class="col-md-12"><hr></div>			  
+                                 </div>
+								
+			                        <div class="row" style="display:">
+									<div class="col-md-12 ">	
+			                         <a  disabled class="btn btn-danger  col-xs-12 col-sm-12">Search by Scan</a>	
+                                    </div>			  
+                                    </div>			  
+                                
+								
+                            
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>	 	  
+			
+	
+		
+   
+            <!-- /.row -->
+            
+            
+</div>
+        <!-- /#page-wrapper -->
+
+  
+
+
+

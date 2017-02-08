@@ -1,0 +1,54 @@
+ 
+     
+	  
+                
+	<style>	
+.m-b-lg {
+    margin-top: 15px !important;
+}
+.m-b-0 {
+    margin: 100px !important;
+}
+.m-b {
+    margin-bottom: 15px !important;
+}	
+	.panel-profile-img {
+    border: 3px solid #fff;
+    border-radius: 100%;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 5px;
+    margin-top: -70px;
+    max-width: 100px;
+}
+	.panel-heading1 {   padding: 90px 15px;}
+	</style>	
+ <div id="page-wrapper">
+            
+            <!-- /.row -->
+       <div class="row" >	
+		<div class="col-md-12 m-b-lg">
+          <div class="panel panel-default panel-profile m-b-o">
+            <div class="panel-heading1" style="background-image: url(assets/book-images/dellwall2.jpg);"></div>
+            <div class="panel-body text-center">
+              <img class="panel-profile-img" src="assets/book-images/user2-160x160.jpg">
+              <h5 class="panel-title"><b ng-bind="UserData.userName | uppercase"></b></h5>
+			  <p class="m-b">User ID:<b ng-bind="UserData._id "></b></p>
+              <p class="m-b"><b ng-bind="UserData.emailId"></b></p>
+              <p class="m-b">Status:Active<b ng-bind="UserData.status"></b></p>
+              <p class="m-b">RoleId:Admin<b ng-bind="UserData.roleId"></b></p>
+              <p class="m-b">CreatedDate :<b ng-bind="UserData.createdDate"></b></p>
+              
+            </div>
+          </div>
+        </div>
+                
+                
+      </div>
+            <!-- /.row -->
+            
+            
+ </div>
+        <!-- /#page-wrapper -->
+
+
+
