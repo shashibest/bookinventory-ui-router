@@ -1,9 +1,9 @@
 {
-  "name": "angular-seed",
+  "name": "shashikant",
   "private": true,
   "version": "0.0.0",
-  "description": "A starter project for AngularJS",
-  "repository": "https://github.com/angular/angular-seed",
+  "description": "AngularJs Book Inventory Project",
+  "repository": "https://github.com/shashibest/bookinventory-ui-router",
   "license": "MIT",
   "devDependencies": {
     "bower": "^1.7.7",
